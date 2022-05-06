@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_logo"
+        android:label="UET Smart Library"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/app_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".return_by_details"
+            android:exported="true" />
+        <activity
+            android:name=".book_details"
+            android:exported="true" />
+        <activity
+            android:name=".edit_student"
+            android:exported="true" />
+        <activity
+            android:name=".issue_by_book_name"
+            android:exported="true" />
+        <activity
+            android:name=".edit_book"
+            android:exported="true" />
+        <activity android:name=".Returned_books" />
+        <activity android:name=".issued_books" />
+        <activity
+            android:name=".Data.return_book"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".add_books"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".add_students"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Data.splash_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Data.menu_activity" />
+        <activity
+            android:name=".books_details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".student_details"
+            android:screenOrientation="portrait" />
+        <activity android:name=".Student_file" />
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

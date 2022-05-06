@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".book_details"
+    android:orientation="vertical"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Title:"
+      android:textColor="@color/purple_500"
+      android:layout_margin="10sp"
+      android:textStyle="bold"
+      android:textSize="20sp"
+
+      />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="132323"
+        android:layout_gravity="center"
+        android:textColor="@color/purple_500"
+        android:textSize="15sp"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Auther:"
+            android:textColor="@color/purple_500"
+            android:layout_margin="10sp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="132323"
+            android:layout_gravity="center"
+            android:textColor="@color/purple_500"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call No:"
+            android:textColor="@color/purple_500"
+            android:layout_margin="10sp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="132323"
+            android:layout_gravity="center"
+            android:textColor="@color/purple_500"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Year:"
+            android:textColor="@color/purple_500"
+            android:layout_margin="10sp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="132323"
+            android:layout_gravity="center"
+            android:textColor="@color/purple_500"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Isbn No:"
+            android:textColor="@color/purple_500"
+            android:layout_margin="10sp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="132323"
+            android:layout_gravity="center"
+            android:textColor="@color/purple_500"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Issued To:"
+            android:textColor="@color/purple_500"
+            android:layout_margin="10sp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="132323"
+            android:layout_gravity="center"
+            android:textColor="@color/purple_500"
+            android:textSize="15sp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Revenue:"
+            android:textColor="@color/purple_500"
+            android:layout_margin="10sp"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="132323"
+            android:layout_gravity="center"
+            android:textColor="@color/purple_500"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+<CheckBox
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="mark as unavilable"
+    android:textColor="@color/purple_500"
+    android:textSize="20sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit book"
+        android:layout_gravity="left"
+        android:layout_marginHorizontal="10sp"
+        android:paddingVertical="15sp"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/edit_white"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="issue book"
+        android:layout_gravity="right"
+        android:layout_marginHorizontal="10sp"
+        android:paddingVertical="15sp"
+        android:textStyle="bold"
+        android:drawableRight="@drawable/arrow_right"
+        />
+    </LinearLayout>
+</LinearLayout>

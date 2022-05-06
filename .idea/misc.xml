@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/app_logo.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/cancel.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/delete.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/edit.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/issued_book.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/issued_books.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/reload.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/return_book.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/send_mail.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/send_sms.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/splash_logo.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/drawable/students.xml" value="0.2203125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_add_books.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_add_students.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_book_details.xml" value="0.25" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_books_details.xml" value="0.18" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_edit_book.xml" value="0.22" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_edit_student.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_issue_by_book_name.xml" value="0.25" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_issued_books.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_menu.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_return_book.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_return_by_details.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_returned_books.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_splash.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_student_details.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/activity_student_file.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/issued_list.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/list_item.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/returned_list.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/layout/student_list.xml" value="0.33" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/menu/options_menu.xml" value="0.1" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/1.0.0/app/src/main/res/menu/search_menu.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

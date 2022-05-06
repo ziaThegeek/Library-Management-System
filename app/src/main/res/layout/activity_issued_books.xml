@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".issued_books">
+
+    <ListView
+        android:id="@+id/list_view_issued_books"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/purple_500"
+        android:dividerHeight="3sp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:id="@+id/error_view"
+        >
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/reload"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No data exists"
+            android:textSize="30dp"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom_view"
+        >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Export to excel"
+            android:id="@+id/export_excel"
+            android:paddingHorizontal="10sp"
+            android:layout_marginLeft="20sp"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Export to PDF"
+            android:id="@+id/export_pdf"
+            android:paddingHorizontal="10sp"
+            android:layout_marginLeft="20sp"
+
+            />
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/purple_500"
+        android:id="@+id/save_file_controls"
+        android:visibility="gone"
+        >
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="output file name"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/save_button"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:id="@+id/file_name"
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="save"
+            android:layout_alignParentRight="true"
+            android:id="@+id/save_button"/>
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/label_book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8sp"
+            android:layout_toLeftOf="@id/label_call_no"
+            android:ellipsize="end"
+            android:ems="10"
+            android:gravity="left"
+            android:lines="1"
+            android:text="Book Title"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:textStyle="italic|bold"
+            />
+
+        <TextView
+            android:id="@+id/label_call_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:ems="12"
+            android:gravity="left"
+            android:lines="1"
+            android:text="Call No "
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="italic|bold" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/book_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8sp"
+            android:layout_toLeftOf="@id/call_no"
+            android:ellipsize="end"
+            android:ems="1"
+            android:gravity="left"
+            android:lines="1"
+            android:text="Introdction to computer science and engineering"
+            android:textColor="@color/purple_500"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/call_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            android:layout_marginRight="20sp"
+            android:ellipsize="end"
+            android:ems="14"
+            android:gravity="right"
+            android:lines="1"
+            android:text="`00001"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/label_book_auther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8sp"
+            android:layout_toLeftOf="@id/label_book_publisher"
+            android:ellipsize="end"
+            android:ems="10"
+            android:gravity="left"
+            android:lines="1"
+            android:text="Student Name"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/label_book_publisher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:ems="12"
+            android:gravity="left"
+            android:lines="1"
+            android:text="Reg No."
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/student_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="10sp"
+            android:layout_toLeftOf="@id/reg_no"
+            android:ellipsize="end"
+            android:ems="10"
+            android:gravity="right"
+            android:lines="1"
+            android:text="Zia Ur Rahman"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/reg_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20sp"
+            android:ellipsize="end"
+            android:ems="14"
+            android:gravity="right"
+            android:lines="1"
+            android:text="2018-cs-531"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/label_date_issued"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8sp"
+            android:layout_toLeftOf="@id/label_charges"
+            android:ellipsize="end"
+            android:ems="10"
+            android:gravity="left"
+            android:lines="1"
+            android:text="Date Returned"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+        <TextView
+            android:id="@+id/label_charges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:ellipsize="end"
+            android:ems="12"
+            android:gravity="left"
+            android:lines="1"
+            android:text="Charges"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+    </RelativeLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/date_returned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="20sp"
+            android:layout_toLeftOf="@id/charges"
+            android:ellipsize="end"
+            android:ems="10"
+            android:gravity="right"
+            android:lines="1"
+            android:text="23/04/2021"
+            android:textColor="@color/purple_500"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/charges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20sp"
+            android:ellipsize="end"
+            android:ems="14"
+            android:gravity="right"
+            android:lines="1"
+            android:text="Rs.2000"
+            android:textColor="@color/purple_500"
+
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10sp"
+            android:orientation="vertical"
+            android:id="@+id/delete"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/delete" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Remove"
+                android:textColor="@color/purple_500"
+                android:textSize="12sp"
+
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

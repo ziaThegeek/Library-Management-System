@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".books_details">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2018-cs-531"
+                android:textSize="25dp"
+                android:id="@+id/student_name_text"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/purple_500"
+                android:padding="10sp"
+                />
+        </RelativeLayout>
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/purple_500"
+    android:text="Call No:"
+    android:textSize="18sp"/>
+<AutoCompleteTextView
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/call_no"
+    android:singleLine="true"
+    android:hint="0001"
+    android:completionThreshold="1"
+    />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="select"
+            android:id="@+id/select"
+android:layout_gravity="center"
+            android:paddingHorizontal="50sp"
+            android:drawableRight="@drawable/check"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="name"
+            android:id="@+id/name"
+            android:enabled="false"
+            android:textColor="@color/black"
+
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="auther name"
+            android:id="@+id/authar"
+            android:textColor="@color/black"
+            android:enabled="false"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="edition no"
+android:id="@+id/edition"
+android:enabled="false"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ISBN no"
+            android:id="@+id/ISBN"
+            android:enabled="false"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Published year"
+            android:id="@+id/year"
+            android:enabled="false"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="pages"
+            android:id="@+id/pages"
+            android:enabled="false"
+            android:textColor="@color/black"
+
+            />
+        <EditText
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="No of Editions available"
+            android:id="@+id/quantity"
+android:enabled="false"
+            android:textColor="@color/black"
+
+            />
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="publisher"-->
+<!--            android:id="@+id/publisher"-->
+<!--            android:enabled="false"-->
+<!--            />-->
+<!--        <EditText-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="location"-->
+<!--  android:id="@+id/location"-->
+<!--android:enabled="false"-->
+<!--            />-->
+
+<!--<Button-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:id="@+id/date_picker"-->
+<!--    android:text="18/12/2013"-->
+<!--    />-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/button_controls"
+            >
+
+            <Button
+                android:id="@+id/done"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp"
+                android:enabled="false"
+                android:text="issue book"
+                android:drawableRight="@drawable/arrow_right"
+                />
+              <CheckBox
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="inform via sms(Charges may apply)"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/check_box"
+                android:layout_below="@id/done"
+                android:textSize="20dp"
+
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

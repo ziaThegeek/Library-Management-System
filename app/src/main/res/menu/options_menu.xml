@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/select"
+        android:icon="@drawable/search"
+        android:title="select"
+        app:showAsAction="collapseActionView|ifRoom"
+        app:actionViewClass="android.widget.SearchView" />
+
+<!--&lt;!&ndash;    <item android:id="@+id/share"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:icon="@drawable/share"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:title="share"&ndash;&gt;-->
+<!--&lt;!&ndash;        app:showAsAction="ifRoom"&ndash;&gt;-->
+<!--&lt;!&ndash;        />&ndash;&gt;-->
+
+<!--        />-->
+
+<!--    <item android:id="@+id/details"-->
+<!--        android:icon="@drawable/delete"-->
+<!--        android:title="view details"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        />-->
+
+<!--    <item android:id="@+id/delete"-->
+<!--        android:icon="@drawable/delete"-->
+<!--        android:title="delete"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        />-->
+
+<!--        />-->
+<!--    <item android:id="@+id/update"-->
+<!--    android:icon="@drawable/edit"-->
+<!--    android:title="update"-->
+<!--        app:showAsAction="ifRoom"-->
+<!--        />-->
+
+    <item android:id="@+id/add_data"
+        android:icon="@drawable/upload_icon"
+        android:title="add data"
+        app:showAsAction="ifRoom"
+        >
+        <menu>
+            <item android:id="@+id/add_single_book"
+                android:icon="@drawable/students"
+                android:title="add single item"/>
+            <item android:id="@+id/upload_file"
+                android:icon="@drawable/issued_books"
+                android:title="upload excel.xls file"/>
+            <!--        app:showAsAction="ifRoom"-->
+            />
+            <!--        app:showAsAction="ifRoom"-->
+            />
+        </menu>
+    </item>
+    <!--        app:showAsAction="ifRoom"-->
+    />
+</menu>
