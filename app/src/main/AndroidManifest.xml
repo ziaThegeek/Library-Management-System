@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.barcodereader">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="Gepco Nwl03"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BarCodeReader">
+        <activity
+            android:name=".add_sub_division"
+            android:exported="false" />
+        <activity
+            android:name=".subdivisons"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".add_acc_numbers"
+            android:exported="false" />
+        <activity
+            android:name=".add_batch"
+            android:exported="false" />
+        <activity
+            android:name=".add_feeder"
+            android:exported="false" />
+        <activity
+            android:name=".Account_numbers"
+            android:exported="false" />
+        <activity
+            android:name=".batches"
+            android:exported="false" />
+        <activity
+            android:name=".feeders"
+            android:exported="false">
+
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

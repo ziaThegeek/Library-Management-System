@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "621693888903",
+    "firebase_url": "https://auth-706eb-default-rtdb.firebaseio.com",
+    "project_id": "auth-706eb",
+    "storage_bucket": "auth-706eb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621693888903:android:1a27282a7d98df26c40b22",
+        "android_client_info": {
+          "package_name": "com.example.barcodereader"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621693888903-3hp3bpllcmvv0ve712j3h1mm6rmek65a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR0BuWWWLHLNGi3eoporZf2VRWvqmxi-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621693888903-3hp3bpllcmvv0ve712j3h1mm6rmek65a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621693888903:android:fc684804e48eac50c40b22",
+        "android_client_info": {
+          "package_name": "com.example.diseaseclassification"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621693888903-3hp3bpllcmvv0ve712j3h1mm6rmek65a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR0BuWWWLHLNGi3eoporZf2VRWvqmxi-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621693888903-3hp3bpllcmvv0ve712j3h1mm6rmek65a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
