@@ -35,6 +35,7 @@ public class db_handler_feeders extends SQLiteOpenHelper {
         init();
     }
 
+
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
 
@@ -42,32 +43,36 @@ public class db_handler_feeders extends SQLiteOpenHelper {
                 "CREATE TABLE IF NOT EXISTS " + "feeders" + " (" +
                         "feeder_name" + " TEXT," +
                         "feeder_code" + " TEXT," +
+                        "subdivision_code" + " TEXT," +
                         "bd_name" + " TEXT)";
 //        Toast.makeText(context, "created", Toast.LENGTH_SHORT).show();
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE);
 //        create_bacthes(sqLiteDatabase);
 
     }
-    public void  create_feader(String divison_code)
+    public void  create_feader()
     {
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         String SQL_CREATE_TABLE =
-                "CREATE TABLE IF NOT EXISTS '" + divison_code + "' (" +
+                "CREATE TABLE IF NOT EXISTS '" + "feeders" + "' (" +
                         "feeder_name" + " TEXT," +
                         "feeder_code" + " TEXT," +
+                        "subdivision_code" + " TEXT," +
                         "bd_name" + " TEXT)";
 //        Toast.makeText(context, "created", Toast.LENGTH_SHORT).show();
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE);
 //        create_bacthes(sqLiteDatabase);
     }
-    public  void insert(String feeder_name,String feeder_code,String division_code,String bd_name)
+    public  void insert(String feeder_name,String feeder_code,String division_code,String bd_name )
     {
         SQLiteDatabase sqLiteDatabase=getWritableDatabase();
         ContentValues contentValues=new ContentValues();
 contentValues.put("feeder_name",feeder_name);
 contentValues.put("feeder_code",feeder_code);
+contentValues.put("subdivision_code",division_code);
 contentValues.put("bd_name",bd_name);
-long newRowId = sqLiteDatabase.insert("'"+division_code+"'", null, contentValues);
+
+long newRowId = sqLiteDatabase.insert("'"+"feeders"+"'", null, contentValues);
     }
     public  void update(String feeder_name,String feeder_code,String division_code,String bd_name)
     {
@@ -86,7 +91,7 @@ long newRowId = sqLiteDatabase.insert("'"+division_code+"'", null, contentValues
     public  void load_data(String division_code)
     {
         SQLiteDatabase sqLiteDatabase=getReadableDatabase();
-        String query="SELECT * FROM '"+division_code+"' ORDER BY feeder_code ASC";
+        String query="SELECT feeder_name,feeder_code,bd_name FROM "+"feeders"+" WHERE subdivision_code="+division_code+" ORDER BY feeder_code ASC";
         Cursor cursor = sqLiteDatabase.rawQuery(query, null);
         while (cursor.moveToNext())
         {
@@ -120,5 +125,15 @@ long newRowId = sqLiteDatabase.insert("'"+division_code+"'", null, contentValues
         feeder_name=new ArrayList<>();
         feeder_code=new ArrayList<>();
         bd_mame=new ArrayList<>();
+    }
+    public String get_feeder_code(String feeder_name){
+        SQLiteDatabase sqLiteDatabase=getReadableDatabase();
+        String query="SELECT feeder_code FROM '"+"feeders"+"' WHERE feerder_name='zia'";
+        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+        if (cursor.moveToFirst())
+            return cursor.getString(0);
+
+        return null;
+
     }
 }

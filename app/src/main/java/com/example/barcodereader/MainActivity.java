@@ -41,8 +41,8 @@ List<String> ref_no;
         textView = findViewById(R.id.textView);
         button = findViewById(R.id.btnView);
         ref_no=new ArrayList<>();
-        db_handler_acc_numbers db_accounts=new db_handler_acc_numbers(this);
-        ref_no=db_accounts.getRef_no();
+//        db_handler_acc_numbers db_accounts=new db_handler_acc_numbers(this,);
+//        ref_no=db_accounts.getRef_no();
          ref =new String[ref_no.size()];
          ref=ref_no.toArray(new String[ref_no.size()]);
         String[] xyz = { "08125130937001", "08125130613102", "08125130589604","08125130589000","08125130588900","08125130588802","08125130588801",

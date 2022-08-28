@@ -19,4 +19,9 @@
         android:icon="@drawable/reload"
         android:id="@+id/export"
         ></item>
+    <item
+        android:title="Settings"
+        android:icon="@drawable/reload"
+        android:id="@+id/settings"
+        ></item>
 </menu>

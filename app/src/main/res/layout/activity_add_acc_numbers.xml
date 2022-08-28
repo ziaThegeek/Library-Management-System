@@ -199,7 +199,7 @@ android:layout_gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="right"
-                    android:text="none"
+                    android:text="0"
                     android:textStyle="bold"
                     />
             </LinearLayout>

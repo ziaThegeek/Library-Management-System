@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class add_feeder extends AppCompatActivity {
     EditText feeder_name, feeder_code, bd_name;
@@ -28,8 +29,10 @@ Intent intent;
 
                 db_handler_feeders db_feeders = new db_handler_feeders(add_feeder.this);
                 db_feeders.insert(feeder_name.getText().toString(), feeder_code.getText().toString(), intent.getStringExtra("division_code"), bd_name.getText().toString());
-                db_handler_batches db_batches=new db_handler_batches(add_feeder.this);
-                db_batches.create_batch(feeder_name.getText().toString());
+                Toast.makeText(add_feeder.this, "feeder  "+feeder_name.getText().toString()+"  added successfully", Toast.LENGTH_SHORT).show();
+                finish();
+//                db_handler_batches db_batches=new db_handler_batches(add_feeder.this);
+//                db_batches.create_batch(feeder_name.getText().toString());
             }
         });
     }

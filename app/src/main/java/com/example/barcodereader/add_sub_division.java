@@ -23,12 +23,14 @@ public class add_sub_division extends AppCompatActivity {
 add_division.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View view) {
+        
         db_handler_sub_divisions db_sub_divisions = new db_handler_sub_divisions(add_sub_division.this);
+        if (db_sub_divisions.has_duplicate(division_code.getText().toString()))
+            Toast.makeText(add_sub_division.this, "division already exists", Toast.LENGTH_SHORT).show();
+        else {
         db_sub_divisions.insert(division_name.getText().toString(), division_code.getText().toString(), sdo_name.getText().toString());
-        db_handler_feeders db_feeders=new db_handler_feeders(add_sub_division.this);
-        db_feeders.create_feader(division_code.getText().toString());
         Toast.makeText(add_sub_division.this, "subdivision"+division_code.getText().toString()+"added", Toast.LENGTH_SHORT).show();
-        finish();
+        finish();}
     }
 });
 

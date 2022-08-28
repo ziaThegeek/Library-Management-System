@@ -1,52 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/teal_700"
-    android:layout_marginHorizontal="2sp"
-    app:cardCornerRadius="15dp"
-    android:layout_margin="10sp"
 
-    android:paddingVertical="1sp">
 
-    <androidx.cardview.widget.CardView
+    >
+    <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-
-        android:backgroundTint="@color/purple_500"
-        android:background="@color/white"
-        >
+        android:layout_height="wrap_content"
+        android:padding="16sp"
+        android:backgroundTint="@color/teal_700"
+android:layout_marginHorizontal="10sp"
+        android:layout_marginVertical="4sp"
+        app:cardCornerRadius="7sp">
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="15sp"
-
+    android:padding="6sp"
     >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/white"
-        android:textAllCaps="true"
-        android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:id="@+id/main_text"
+        android:textSize="12sp"
         android:text=""
-        android:layout_marginHorizontal="20sp"
+        android:layout_marginHorizontal="0sp"
+
 
         />
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="10sp"
         android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
+            android:textSize="12sp"
             android:textStyle="bold"
-            android:layout_marginHorizontal="20sp"
+            android:text=""
+            android:layout_marginHorizontal="0sp"
             android:id="@+id/heading00"
             />
         <TextView
@@ -54,19 +61,22 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textAllCaps="true"
-            android:textStyle="bold"
-            android:layout_marginHorizontal="0sp"
+            android:text=""
+            android:textSize="10sp"
+            android:layout_marginHorizontal="10sp"
             android:id="@+id/text00"
 
 
             />
+    </LinearLayout>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textStyle="bold"
-            android:layout_marginHorizontal="30sp"
+            android:textSize="13sp"
+            android:layout_marginHorizontal="0sp"
             android:id="@+id/heading01"
 
             />
@@ -75,44 +85,122 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textAllCaps="true"
-            android:textStyle="bold"
             android:id="@+id/text01"
-            android:layout_marginHorizontal="0sp"
-android:gravity="right"
-            android:layout_gravity="right"/>
-    </LinearLayout>
+            android:textSize="10sp"
+            android:layout_marginHorizontal="10sp"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textStyle="bold"-->
+<!--            android:text="Bill Month"-->
+<!--            android:textSize="12sp"-->
+<!--            android:layout_marginHorizontal="0sp"-->
+<!--            android:id="@+id/bill_month_title"-->
+<!--            />-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textAllCaps="true"-->
+<!--            android:text="jul 21"-->
+<!--            android:id="@+id/bill_month"-->
+<!--            android:textSize="10sp"-->
+<!--            android:layout_marginHorizontal="10sp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_gravity="center"/>-->
 
+    </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
+        android:layout_marginTop="05sp"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+
         >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:text=""
+            android:textSize="13sp"
+            android:layout_marginHorizontal="0sp"
+            android:id="@+id/metr_title"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:text=""
+            android:id="@+id/meter_no"
+            android:textSize="10sp"
+            android:layout_marginHorizontal="10sp"
+            android:gravity="center"
+            android:layout_gravity="center"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:text=""
+            android:layout_marginHorizontal="0sp"
+            android:id="@+id/contact_title"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:text=""
+            android:textSize="10sp"
+            android:layout_marginHorizontal="10sp"
+            android:id="@+id/contact_no"
+
+
+            />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:id="@+id/heading10"
+
+            android:textSize="13sp"
             android:textColor="@color/white"
-            android:layout_gravity="right"
-            android:layout_marginHorizontal="20sp"
+            android:layout_marginHorizontal="0sp"
             />
         <TextView
+
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textAllCaps="true"
             android:textColor="@color/white"
-            android:layout_gravity="right"
             android:layout_marginHorizontal="0sp"
             android:id="@+id/text10"
+            android:textSize="10sp"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:layout_gravity="right"
-            android:layout_marginLeft="30sp"
+            android:textSize="13sp"
+            android:layout_marginLeft="10sp"
             android:id="@+id/heading11"
             />
         <TextView
@@ -120,13 +208,15 @@ android:gravity="right"
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:textColor="@color/white"
+            android:textSize="13sp"
             android:layout_gravity="right"
-            android:layout_marginLeft="30sp"
+            android:layout_marginLeft="10sp"
             android:id="@+id/text11"
             />
+</LinearLayout>
 
     </LinearLayout>
-</LinearLayout>
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
-</androidx.cardview.widget.CardView>
+    </LinearLayout>
+

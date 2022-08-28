@@ -5,26 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Account_numbers">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
+        android:orientation="horizontal"
         android:id="@+id/topPanel"
         >
+
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="search"
             android:id="@+id/search_text"
-            android:drawableLeft="@drawable/search"/>
-    </LinearLayout>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_toLeftOf="@id/search_by"
+            android:drawableLeft="@drawable/search"
+            android:hint="search" />
+
+        <TextView
+            android:id="@+id/search_by"
+            android:layout_width="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="10sp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableLeft="@drawable/sort_by" />
+    </RelativeLayout>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/topPanel"
         android:id="@+id/listview"
-        android:divider="@color/white"
+android:divider="#00000000"
         android:dividerHeight="10sp"
         />
     <TextView

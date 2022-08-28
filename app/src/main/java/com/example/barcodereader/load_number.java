@@ -1,6 +1,7 @@
 package com.example.barcodereader;
 
 import android.os.AsyncTask;
+import android.util.Size;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -17,6 +18,7 @@ public class load_number extends AsyncTask<String,Void,Void> {
         this.name=name;
         this.amount=amount;
         this.age=age;
+
     }
 
     @Override
@@ -26,8 +28,8 @@ public class load_number extends AsyncTask<String,Void,Void> {
             try {
                 document = Jsoup.connect("https://bill.pitc.com.pk/gepcobill/general?refno=" + strings[i]).get();
 
-            } catch (IOException e) {
-                e.printStackTrace();
+            } catch (Exception e) {
+
             }
 
         }
@@ -38,12 +40,25 @@ public class load_number extends AsyncTask<String,Void,Void> {
     @Override
     protected void onPostExecute(Void unused) {
         super.onPostExecute(unused);
-        name.setText(getName());
-        amount.setText(getAmount());
-        age.setText(getAge());
+        try {
+            if (getName() != null)
+                name.setText(getName());
+            else
+                name.setText("record not found");
+            if (getAmount() != null)
+                amount.setText(getAmount());
+            if (getAge() != null)
+                age.setText(getAge());
+        }
+        catch (Exception e)
+        {
+            name.setText("record not found");
+            amount.setText("record not found");
+            e.printStackTrace();
+        }
     }
 
-    private String getAge() {
+    private String getAge() throws IndexOutOfBoundsException {
         Element table = document.select("table").get(10);
         Elements rows = table.select("tr");
         Element row = rows.get(1);
@@ -58,17 +73,27 @@ public class load_number extends AsyncTask<String,Void,Void> {
         return null;
     }
 
-    private String getAmount() {
+    private String getAmount() throws IndexOutOfBoundsException{
         Element table = document.select("table").get(14);
         Elements rows = table.select("tr");
         Element row = rows.get(0);
         Elements cols = row.select("td");
-
         return cols.get(4).text();
     }
 
-    private String getName() {
+    private String getName()throws IndexOutOfBoundsException {
         Element para=document.select("p").get(0);
         return para.text().toString().substring(15);
+    }
+    public String getmeter_no()throws IndexOutOfBoundsException{
+        Element table = document.select("table").get(4);
+        Elements rows = table.select("tr");
+        Element row = rows.get(4);
+        Elements cols = row.select("td");
+        String meter_no = cols.get(0).text();
+        return meter_no;
+
+
+
     }
 }
