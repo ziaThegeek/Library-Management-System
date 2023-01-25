@@ -35,7 +35,7 @@ public class add_acc_numbers extends AppCompatActivity {
     private static final int REQUEST_CODE = 10;
     private static final int REQUST_PERMISSION_CODE = 11;
     EditText acc_no;
-    TextView batch_no, feeder_name, amount, name, age, ref_no,division_code,meter_no;
+    TextView batch_no, feeder_name, amount, name, age, ref_no,division_code,meter_no,phone_number;
     Button add_acc_no, Load_data, upload_file;
     String acc_number;
     Intent intent;
@@ -55,6 +55,7 @@ public class add_acc_numbers extends AppCompatActivity {
         add_acc_no = findViewById(R.id.add);
         Load_data = findViewById(R.id.load_data);
         acc_no = findViewById(R.id.acc_number);
+        phone_number=findViewById(R.id.phone);
         division_code.setText(intent.getStringExtra("division_code"));
         batch_no.setText(intent.getStringExtra("batch_no"));
         feeder_name.setText(intent.getStringExtra("feeder_name"));
@@ -85,7 +86,7 @@ public class add_acc_numbers extends AppCompatActivity {
 
                 else if (!name.getText().toString().isEmpty()&&name.getText().toString()!="record not found") {
                     db_account_numbers.insert(batch_no.getText().toString()+division_code.getText().toString()+acc_number, "null", 0,
-                            0, "");
+                            0, "",phone_number.getText().toString().trim());
                     Toast.makeText(add_acc_numbers.this, "account number added successfully", Toast.LENGTH_SHORT).show();
                     name.setText("");
                     amount.setText("");

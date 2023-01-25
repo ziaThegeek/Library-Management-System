@@ -51,9 +51,9 @@
         android:layout_marginTop="10sp"
         android:layout_marginEnd="10sp"
         android:layout_marginBottom="10sp"
-        android:backgroundTint="#FFEB3B"
+
         android:text="add \n Sub division"
-        android:textColor="@color/black"
+
         android:textStyle="bold" />
 
 </RelativeLayout>

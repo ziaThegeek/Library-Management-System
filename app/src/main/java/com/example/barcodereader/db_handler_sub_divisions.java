@@ -128,7 +128,8 @@ public class db_handler_sub_divisions extends SQLiteOpenHelper {
                         "amount" + " INT," +
                         "feeder_code" + " TEXT," +
                         "subdivision_code" + " TEXT," +
-                        "age" + " INT)";
+                        "age" + " INT,"+
+                         "phone_number"+" TEXT)";
         sqLiteDatabase.execSQL(SQL_CREATE_TABLE);
     }
     public boolean has_duplicate(String division_code)

@@ -8,13 +8,14 @@
     android:layout_height="wrap_content"
 
 
+
     >
     <com.google.android.material.card.MaterialCardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16sp"
-        android:backgroundTint="@color/teal_700"
-android:layout_marginHorizontal="10sp"
+        android:backgroundTint="@color/purple_700"
+        android:layout_marginHorizontal="10sp"
         android:layout_marginVertical="4sp"
         app:cardCornerRadius="7sp">
 <LinearLayout
@@ -22,6 +23,7 @@ android:layout_marginHorizontal="10sp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="6sp"
+    android:layout_marginLeft="10sp"
     >
 
     <TextView
@@ -33,18 +35,19 @@ android:layout_marginHorizontal="10sp"
         android:textSize="12sp"
         android:text=""
         android:layout_marginHorizontal="0sp"
-
+        android:layout_marginLeft="10sp"
 
         />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_marginTop="10sp"
+        android:layout_marginLeft="10sp"
         android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-        android:layout_gravity="center"
+            android:layout_gravity="center"
         >
         <TextView
             android:layout_width="wrap_content"
@@ -117,7 +120,7 @@ android:layout_marginHorizontal="10sp"
         android:layout_width="match_parent"
         android:layout_marginTop="05sp"
         android:layout_height="wrap_content"
-
+        android:layout_marginLeft="10sp"
         >
 
 
@@ -172,7 +175,9 @@ android:layout_marginHorizontal="10sp"
 
     <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -202,6 +207,7 @@ android:layout_marginHorizontal="10sp"
             android:textSize="13sp"
             android:layout_marginLeft="10sp"
             android:id="@+id/heading11"
+            android:layout_marginTop="10sp"
             />
         <TextView
             android:layout_width="wrap_content"
@@ -213,8 +219,49 @@ android:layout_marginHorizontal="10sp"
             android:layout_marginLeft="10sp"
             android:id="@+id/text11"
             />
-</LinearLayout>
 
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="15sp"
+
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/phone_right"
+        android:layout_gravity="center"
+        android:id="@+id/phoneImage"
+        />
+
+<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10sp"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_gravity="center"
+        android:text="03414657341"
+        android:id="@+id/phoneNumber"
+    />
+
+    <TextView
+        android:id="@+id/more_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="See More"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40sp"
+
+        />
+
+</LinearLayout>
     </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 

@@ -20,7 +20,7 @@ public class import_excel_file {
     InputStream is;
     Sheet sheet;
     List<String> account_number;
-    int rows;
+    int rows,columns;
     Context context;
     String batch_name,feeder_code,division_code;
     int batch_no;
@@ -45,8 +45,10 @@ public class import_excel_file {
         for (int i = 0; i < sheet.getRows(); i++) {
             Cell[] row = sheet.getRow(i);
             if (row[0].getContents()!="");
-            db_account.insert(batch_name+division_code+row[0].getContents(),"null",0,0,null);
+            db_account.insert(batch_name+division_code+row[0].getContents(),"null",0,0,null,
+                    sheet.getColumns()>1?row[1].getContents():"N/A");
         }
+        
     }
 
 }

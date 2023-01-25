@@ -44,10 +44,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_margin="10sp"
-        android:backgroundTint="#FFEB3B"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="add \n feeder" />
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginEnd="10sp"
+        android:layout_marginBottom="10sp"
+
+        android:text="add \n feeder"
+
+        android:textStyle="bold" />
 
 </RelativeLayout>

@@ -40,7 +40,7 @@ listView.setEmptyView(findViewById(R.id.empty_view));
 
 add_feeder=findViewById(R.id.add_feeder);
 if (feeder_name!=null) {
-    listAdapter= new listview_adapter(this, feeder_name,feeder_code,null,bd_name,null,"Feeader Code:\t",null,"BD Name:\t",null,null);
+    listAdapter= new listview_adapter(this, feeder_name,feeder_code,null,bd_name,null,"Feeader Code:\t",null,"BD Name:\t",null,null,false,null);
     listView.setAdapter(listAdapter);
 }
 add_feeder.setOnClickListener(new View.OnClickListener() {
@@ -77,7 +77,7 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         clear();
         listAdapter=null;
         db_feeders.load_data(divison_code);
-        listAdapter= new listview_adapter(this, db_feeders.getFeeder_name(),db_feeders.getFeeder_code(),null,db_feeders.getBd_mame(),null,"Feeader Code:\t",null,"BD Name:\t",null,null);
+        listAdapter= new listview_adapter(this, db_feeders.getFeeder_name(),db_feeders.getFeeder_code(),null,db_feeders.getBd_mame(),null,"Feeader Code:\t",null,"BD Name:\t",null,null,false,null);
         listView.setAdapter(listAdapter);
     }
 }

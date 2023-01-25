@@ -33,7 +33,7 @@ public class Account_numbers extends AppCompatActivity {
     EditText search_text;
     ListView listView;
     Button add_acc_no;
-   List<String> acc_number,name,amount,age,meter_no;
+   List<String> acc_number,name,amount,age,meter_no,phone_number;
     String batch_name,feeder_name;
     String divsion_code;
     TextView search_by;
@@ -54,7 +54,7 @@ public class Account_numbers extends AppCompatActivity {
         divsion_code=intent.getStringExtra("division_code");
         batch_name=intent.getStringExtra("batch_no");
         feeder_name=intent.getStringExtra("feeder_name");
-   db_acc_numbers =new db_handler_acc_numbers(this,batch_name,divsion_code,feeder_name);
+        db_acc_numbers =new db_handler_acc_numbers(this,batch_name,divsion_code,feeder_name);
         String[] search_options={"Consumer Name","Account Number","Meter Number","Age","Amount"};
 
         getSupportActionBar().setTitle("Batch No_"+batch_name);
@@ -66,8 +66,9 @@ public class Account_numbers extends AppCompatActivity {
         age=db_acc_numbers.getAge();
         acc_number=db_acc_numbers.getRef_no();
         meter_no=db_acc_numbers.getMeter_no();
+        phone_number=db_acc_numbers.getPhone_number();
 //        ref_no= (String[]) acc_number.toArray();
-        listview_adapter = new listview_adapter(this, name, acc_number, amount, age, null, "Account No:\t", "Amount:", "Age:\t", null, meter_no);
+        listview_adapter = new listview_adapter(this, name, acc_number, amount, age, null, "Account No:\t", "Amount:", "Age:\t", null, meter_no,true,phone_number);
         listView.setAdapter(listview_adapter);
         search_text.addTextChangedListener(new TextWatcher() {
             @Override
@@ -91,13 +92,14 @@ else
     db_acc_numbers.search_amout(charSequence.toString());
 
 listview_adapter=null;
-listview_adapter=new listview_adapter(Account_numbers.this,db_acc_numbers.getName(),db_acc_numbers.getRef_no(),db_acc_numbers.getAmount(),db_acc_numbers.getAge(),null, "Account No:\t", "Amount:", "Age:\t", null,db_acc_numbers.getMeter_no() );
+listview_adapter=new listview_adapter(Account_numbers.this,db_acc_numbers.getName(),db_acc_numbers.getRef_no(),db_acc_numbers.getAmount(),db_acc_numbers.getAge(),null, "Account No:\t", "Amount:", "Age:\t", null,db_acc_numbers.getMeter_no(),true,db_acc_numbers.getPhone_number() );
 listView.setAdapter(listview_adapter);
 listview_adapter.notifyDataSetChanged();
             }
 
             @Override
             public void afterTextChanged(Editable editable) {
+
 
             }
         });
@@ -195,8 +197,8 @@ public String[] cast_to_string()
         super.onResume();
         clear();
         db_acc_numbers.load_data();
-listview_adapter=null;
-        listview_adapter=new listview_adapter(Account_numbers.this,db_acc_numbers.getName(),db_acc_numbers.getRef_no(),db_acc_numbers.getAmount(),db_acc_numbers.getAge(),null, "Account No:\t", "Amount:", "Age:\t", null,db_acc_numbers.getMeter_no() );
+        listview_adapter=null;
+        listview_adapter=new listview_adapter(Account_numbers.this,db_acc_numbers.getName(),db_acc_numbers.getRef_no(),db_acc_numbers.getAmount(),db_acc_numbers.getAge(),null, "Account No:\t", "Amount:", "Age:\t", null,db_acc_numbers.getMeter_no(),true,db_acc_numbers.getPhone_number() );
         listView.setAdapter(listview_adapter);
     }
 }

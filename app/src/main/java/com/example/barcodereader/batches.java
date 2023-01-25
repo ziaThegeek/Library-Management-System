@@ -40,7 +40,7 @@ public class batches extends AppCompatActivity {
         vilages=db_batches.getVillage_names();
         last_date=db_batches.getLast_date();
         listView.setEmptyView(findViewById(R.id.empty_view));
-        listview_adapter=new listview_adapter(this,batch_no,vilages,null,last_date,null,"Last Date:\t",null,"Village(s):\t",null,null);
+        listview_adapter=new listview_adapter(this,batch_no,vilages,null,last_date,null,"Last Date:\t",null,"Village(s):\t",null,null,false,null);
         listView.setAdapter(listview_adapter);
 
 add_batch.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +76,7 @@ listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
         clear();
         db_batches.load_data(feeder_code,division_code);
         listview_adapter=null;
-        listview_adapter=new listview_adapter(this,db_batches.getBatch_no(),db_batches.getVillage_names(),null,db_batches.getLast_date(),null,"Last Date:\t",null,"Village(s):\t",null,null);
+        listview_adapter=new listview_adapter(this,db_batches.getBatch_no(),db_batches.getVillage_names(),null,db_batches.getLast_date(),null,"Last Date:\t",null,"Village(s):\t",null,null,false,null);
         listView.setAdapter(listview_adapter);
 
     }

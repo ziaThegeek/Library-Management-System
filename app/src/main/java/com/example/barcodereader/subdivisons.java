@@ -42,7 +42,7 @@ public class subdivisons extends AppCompatActivity {
         add_division = findViewById(R.id.add_feeder);
         request_permissions();
         if (divsion_name != null) {
-          listAdapter   = new listview_adapter(this, division_code, sdo_name, null, divsion_name, null, "SDO Name:\t", null, "Sub-Division Name:\t", null,null);
+          listAdapter   = new listview_adapter(this, division_code, sdo_name, null, divsion_name, null, "SDO Name:\t", null, "Sub-Division Name:\t", null,null,false,null);
             listView.setAdapter(listAdapter);
         }
         add_division.setOnClickListener(new View.OnClickListener() {
@@ -112,7 +112,7 @@ write();
         clear();
         db_sub_divisions.load_data();
         listAdapter=null;
-        listAdapter   = new listview_adapter(this, db_sub_divisions.getDivision_code(), db_sub_divisions.getSdo_mame(), null, db_sub_divisions.getDivsion_name(), null, "SDO Name:\t", null, "Sub-Division Name:\t", null,null);
+        listAdapter   = new listview_adapter(this, db_sub_divisions.getDivision_code(), db_sub_divisions.getSdo_mame(), null, db_sub_divisions.getDivsion_name(), null, "SDO Name:\t", null, "Sub-Division Name:\t", null,null,false,null);
         listView.setAdapter(listAdapter);
     }
 }
