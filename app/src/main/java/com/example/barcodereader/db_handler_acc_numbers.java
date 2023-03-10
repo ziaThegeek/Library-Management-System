@@ -240,9 +240,50 @@ public class db_handler_acc_numbers extends SQLiteOpenHelper {
     public Cursor export_date(String acc_start,String acc_end,int amount_min,int amount_max,int age_min,int age_max)
     {
         SQLiteDatabase sqLiteDatabase=getReadableDatabase();
-        String query="SELECT  ref_no,name,amount,age  FROM acc_nos where batch_no='"+batch_name+"'  and feeder_code='"+feeder_code+"' and subdivision_code="+division_code+" and ref_no between '"+acc_start+"' and '"+acc_end+"'  and age between "+age_min+" and "+age_max+" and amount between "+amount_min+" and "+amount_max+" ORDER BY ref_no ASC";
+        String query="SELECT  ref_no,name,amount,age" +
+                "  FROM acc_nos " +
+                "where batch_no='"+batch_name+"'  " +
+                "and feeder_code='"+feeder_code+"' " +
+                "and subdivision_code="+division_code+" " +
+                "and ref_no between '"+acc_start+"' " + "and '"+acc_end+"' " +
+                "and age between "+age_min+" and "+age_max+"" +
+                " and amount between "+amount_min+" and "+amount_max+" " +
+                "ORDER BY ref_no ASC";
         Cursor cursor = sqLiteDatabase.rawQuery(query, null);
 return cursor;
+
+    }
+    public int getMaxAge()
+    {
+        SQLiteDatabase sqLiteDatabase=getReadableDatabase();
+        String query="SELECT  max(age)" +
+                "  FROM acc_nos " +
+                "where batch_no='"+this.batch_name+"'  " +
+                "and feeder_code='"+this.feeder_code+"' " +
+                "and subdivision_code="+this.division_code+"";
+        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+        if (cursor!=null) {
+            cursor.moveToFirst();
+            return cursor.getInt(0);
+        }
+        else
+            return 10;
+    }
+    public int getMaxAmonnt()
+    {
+        SQLiteDatabase sqLiteDatabase=getReadableDatabase();
+        String query="SELECT  max(amount)" +
+                "  FROM acc_nos " +
+                "where batch_no='"+this.batch_name+"'  " +
+                "and feeder_code='"+this.feeder_code+"' " +
+                "and subdivision_code="+this.division_code+"";
+        Cursor cursor = sqLiteDatabase.rawQuery(query, null);
+        if (cursor!=null) {
+            cursor.moveToFirst();
+            return cursor.getInt(0);
+        }
+        else return 100000;
+
 
     }
 public boolean has_duplicate(String ref_no)

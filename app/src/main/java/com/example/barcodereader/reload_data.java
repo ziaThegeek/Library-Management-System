@@ -35,7 +35,7 @@ public class reload_data extends AsyncTask<Void, Void, Void> {
         progress.setTitle("Updating Data...");
         progress.setMessage("Please Wait ");
         progress.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-        progress.setMax(acc_numbers.toArray().length);
+        progress.setMax(acc_numbers.size());
         progress.setCancelable(false);
         progress.setIndeterminate(false);
 
@@ -48,15 +48,15 @@ public class reload_data extends AsyncTask<Void, Void, Void> {
             try {
 
                 if (valid_number(i)) {
+                    progress.setProgress(i+1);
                     progress.setMessage(acc_numbers.get(i) + "");
-//                document = Jsoup.connect("https://bill.pitc.com.pk/gepcobill/general?refno=" + this.acc_numbers.get(i)).get();
+
+                    //document = Jsoup.connect("https://bill.pitc.com.pk/gepcobill/general?refno=" + this.acc_numbers.get(i)).get();
                     if (getAge() == null)
                         db_accounts.update(acc_numbers.get(i), getName(), (getAmount().matches("^-?[0-9]{1,8}?$") ? Integer.parseInt(getAmount()) : 0), 0, getmeter_no());
                     else
                         db_accounts.update(acc_numbers.get(i), getName(), (getAmount().matches("^-?[0-9]{1,8}?$") ? Integer.parseInt(getAmount()) : 0), (getAge().matches("^-?\\d+$") ? Integer.parseInt(getAge()) : 0), getmeter_no());
-//                progress.setTitle(i+"/"+acc_numbers.size());
 
-                    progress.setProgress(i);
                 }
             } catch (Exception e) {
 
@@ -78,6 +78,7 @@ public class reload_data extends AsyncTask<Void, Void, Void> {
 
     @Override
     protected void onPreExecute() {
+
         super.onPreExecute();
         progress.show();
     }
@@ -85,13 +86,19 @@ public class reload_data extends AsyncTask<Void, Void, Void> {
     @Override
     protected void onProgressUpdate(Void... values) {
         super.onProgressUpdate(values);
-//     progress.dismiss();
+
 
     }
 
     @Override
     protected void onPostExecute(Void unused) {
+        try {
+            Thread.sleep(200);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         super.onPostExecute(unused);
+
         progress.dismiss();
     }
 

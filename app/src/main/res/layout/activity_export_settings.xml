@@ -152,6 +152,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/amount_min"
+                        android:paddingHorizontal="40dp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
@@ -162,6 +163,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/amount_max"
+                        android:paddingHorizontal="40dp"
                         />
                 </LinearLayout>
             </LinearLayout>

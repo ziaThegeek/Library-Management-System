@@ -144,7 +144,7 @@ search_by.setOnClickListener(new View.OnClickListener() {
                 Toast.makeText(this, "refresh", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.reload:
-                new reload_data(this,batch_name,acc_number,divsion_code,feeder_name).execute();
+                new reload_data(Account_numbers.this,batch_name,acc_number,divsion_code,feeder_name).execute();
                 Toast.makeText(this, acc_number.size()+"", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.export:

@@ -45,9 +45,27 @@ public class import_excel_file {
         for (int i = 0; i < sheet.getRows(); i++) {
             Cell[] row = sheet.getRow(i);
             if (row[0].getContents()!="");
+            String mobPhone="";
+            if (sheet.getColumns()>1)
+            {
+                mobPhone=row[1].getContents();
+                if (mobPhone.startsWith("92"))
+                {
+                    mobPhone="0"+mobPhone.substring(2);
+
+                }
+                else if (mobPhone.startsWith("+92"))
+                {
+                    mobPhone="0"+mobPhone.substring(3);
+
+                }
+                else
+                    mobPhone="N/A";
+            }
             db_account.insert(batch_name+division_code+row[0].getContents(),"null",0,0,null,
-                    sheet.getColumns()>1?row[1].getContents():"N/A");
+                    mobPhone);
         }
+        Toast.makeText(context, rows+" Records Imported", Toast.LENGTH_SHORT).show();
         
     }
 

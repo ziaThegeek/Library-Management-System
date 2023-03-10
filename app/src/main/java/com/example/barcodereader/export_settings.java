@@ -30,6 +30,7 @@ String batch_name,division_code,feeder_code;
 Intent data_collector;
     ArrayAdapter<String> arrayAdapter;
     Button export_button;
+    int maxAge,maxAmount;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +42,10 @@ Intent data_collector;
         amount_min=findViewById(R.id.amount_min);
         amount_max=findViewById(R.id.amount_max);
         export_button=findViewById(R.id.export_button);
-        String[] amount_options={"0","500","1000","2000","5000","10000","10000000"};
-        String[] age_options={"0","1","2","3","4","5","6","7","8","9","10"};
+//        String[] amount_options={"0","500","1000","2000","5000","10000","10000000"};
+//        String[] age_options={"0","1","2","3","4","5","6","7","8","9","10"};
+        List<String> amount_options=new ArrayList<>();
+        List<String> age_options=new ArrayList<>();
 
         data_collector=getIntent();
         batch_name=data_collector.getStringExtra("batch_no");
@@ -60,6 +63,27 @@ age=new ArrayList<>();
 amount=new ArrayList<>();
 name=new ArrayList<>();
 db_handler_acc_numbers db_acc_numbre=new db_handler_acc_numbers(this,batch_name,division_code,feeder_code);
+maxAge=db_acc_numbre.getMaxAge();
+maxAmount=db_acc_numbre.getMaxAmonnt();
+for (int i=0;i<=maxAge;i++)
+{
+    if (i<=maxAge)
+    {
+        age_options.add(Integer.toString(i));
+    }
+}
+for (int j=0;j<=maxAmount;j+=1000)
+{
+    if (j<=maxAmount)
+    {
+        amount_options.add(Integer.toString(j));
+    }
+    else {
+        amount_options.add(Integer.toString(maxAmount));
+        break;
+    }
+}
+
 db_acc_numbre.load_data();
       arrayAdapter =new ArrayAdapter(this, android.R.layout.simple_list_item_1,db_acc_numbre.getRef_no());
       acc_start.setAdapter(arrayAdapter);
@@ -86,9 +110,13 @@ export_button.setOnClickListener(new View.OnClickListener() {
         else if (Integer.parseInt(amount_max.getSelectedItem().toString())<Integer.parseInt(amount_min.getSelectedItem().toString()))
             Toast.makeText(export_settings.this, "minimum amount  should be less than  or equal to maximum amount", Toast.LENGTH_SHORT).show();
         else {
-            Cursor cursor = db_acc_numbre.export_date(acc_start.getSelectedItem().toString(), acc_end.getSelectedItem().toString(),
-                    Integer.parseInt(amount_min.getSelectedItem().toString()), Integer.parseInt(amount_max.getSelectedItem().toString()),
-                    Integer.parseInt(age_min.getSelectedItem().toString()), Integer.parseInt(age_max.getSelectedItem().toString()));
+            Cursor cursor = db_acc_numbre.export_date(
+                    acc_start.getSelectedItem().toString(),
+                    acc_end.getSelectedItem().toString(),
+                    Integer.parseInt(amount_min.getSelectedItem().toString()),
+                    Integer.parseInt(amount_max.getSelectedItem().toString()),
+                    Integer.parseInt(age_min.getSelectedItem().toString()),
+                    Integer.parseInt(age_max.getSelectedItem().toString()));
             if (cursor != null) {
                 while (cursor.moveToNext()) {
 

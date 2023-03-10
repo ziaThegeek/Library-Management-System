@@ -124,7 +124,9 @@ public class add_acc_numbers extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         switch (requestCode) {
+
             case 10:
                 if (resultCode == RESULT_OK) {
                     Uri uri = data.getData();
@@ -146,7 +148,7 @@ public class add_acc_numbers extends AppCompatActivity {
                         Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
 
                     }
-                    super.onActivityResult(requestCode, resultCode, data);
+
                 }
         }
         }
