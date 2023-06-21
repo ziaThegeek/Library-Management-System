@@ -94,7 +94,7 @@ public class db_handler_acc_numbers extends SQLiteOpenHelper {
         contentValues.put("subdivision_code",division_code);
         contentValues.put("age",age);
         contentValues.put("phone_number",phone_number);
-        long newRowId = sqLiteDatabase.insert("'"+"acc_nos"+"'", null, contentValues);
+        sqLiteDatabase.insert("'"+"acc_nos"+"'", null, contentValues);
     }
     public void update(String ref_no,String name,int amount,int age,String meter_no)
     {

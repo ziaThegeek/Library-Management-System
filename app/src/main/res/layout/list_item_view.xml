@@ -231,7 +231,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/phone_right"
+        android:src="@drawable/phone"
         android:layout_gravity="center"
         android:id="@+id/phoneImage"
         />
